@@ -1,42 +1,30 @@
+
+@import "tailwindcss";
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-primary-light: #fdba74; /* Light Orange bg-orange-300 */
+  --color-primary: #f97316; /* Main Orange bg-orange-500*/
+  --color-primary-dark: #c2410c; /* Dark Orange bg-orange-700 */
+  --color-primary-hover: #ea580c; /* Hover Effect bg-orange-600 */
+  --color-primary-border: #d97706; /* Border ke liye */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.bg-\[var\(--color-primary-light\)\] {
+  background-color: var(--color-primary-light);
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+.bg-\[var\(--color-primary\)\] {
+  background-color: var(--color-primary);
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.bg-\[var\(--color-primary-dark\)\] {
+  background-color: var(--color-primary-dark);
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+.bg-\[var\(--color-primary-hover\)\] {
+  background-color: var(--color-primary-hover);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.border-\[var\(--color-primary-border\)\] {
+  border-color: var(--color-primary-border);
 }

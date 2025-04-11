@@ -1,95 +1,56 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+
+import Footer from "@/components/footer";
+import HealthNutrition from "@/components/health";
+import Navbar from "@/components/navbar";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main>
+      <Navbar />
+      {/* <div className="h-[120]"></div> */}
+      <div className="pt-16 h-30"></div>
+      <HealthNutrition />
+      
+     
+        {/* Features Section */}
+        <section className="py-10 px-6 bg-white ">
+          <h2 className="text-center text-3xl font-bold text-[var(--color-primary)] mb-8">
+            Why Choose Us?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="p-6 bg-[var(--color-primary-light)] rounded-lg text-center shadow-lg">
+              <h3 className="text-2xl font-semibold mb-3">Wide Selection</h3>
+              <p>We offer a vast variety of grocery items to meet all your needs.</p>
+            </div>
+            <div className="p-6 bg-[var(--color-primary-light)] rounded-lg text-center shadow-lg">
+              <h3 className="text-2xl font-semibold mb-3">Affordable Prices</h3>
+              <p>Get the best deals on high-quality products at unbeatable prices.</p>
+            </div>
+            <div className="p-6 bg-[var(--color-primary-light)] rounded-lg text-center shadow-lg">
+              <h3 className="text-2xl font-semibold mb-3">Fast Delivery</h3>
+              <p>Enjoy quick delivery so you can get your groceries delivered to your door.</p>
+            </div>
+          </div>
+        </section>
+        <br />
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        {/* CTA Section */}
+        <section className="bg-[var(--color-primary)] text-white text-center py-16">
+          <h2 className="text-3xl font-bold mb-4">Get Started Today!</h2>
+          <p className="mb-6">Start shopping and make life easier with RakeshShop.</p>
+          <button className="bg-[var(--color-primary-dark)] hover:bg-[var(--color-primary-hover)] text-white py-2 px-6 rounded-lg">
+            Explore Now
+          </button>
+        </section>
+
+        
+
+        {/* Footer Section */}
+        <Footer />
+     
+
+      
+
+    </main>
   );
 }
