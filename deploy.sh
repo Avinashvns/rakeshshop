@@ -11,6 +11,6 @@ echo "🔨 Building project..."
 npm run build
 
 echo "🚀 Restarting PM2..."
-pm2 restart rakeshshop
+pm2 restart rakeshshop --update-env
 
 echo "✅ Deployment complete!"
