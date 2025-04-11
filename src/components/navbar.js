@@ -58,7 +58,7 @@ export default function Navbar() {
           <div className="bg-[var(--color-primary)] p-2 rounded-full">
             <span className="text-lg font-bold">🛍️</span>
           </div>
-          <h1 className="text-xl font-bold">Surevih</h1>
+          <h1 className="text-xl font-bold">Rakesh Shop</h1>
         </div>
         {/* Search Bar */}
         <div className="flex bg-[var(--color-primary)] items-center w-1/2 relative rounded-full px-3">
