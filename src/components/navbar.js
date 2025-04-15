@@ -10,18 +10,7 @@ export default function Navbar() {
   const [showDropdown, setShowDropdown] = useState(false);
 
   useEffect(() => {
-    // const updateMenu = () => {
-    //   if (window.innerWidth < 640) {
-    //     setVisibleItems(menuItems.slice(0, 2)); // Small screen: Sirf 2 items dikhaye
-    //     setHiddenItems(menuItems.slice(2));
-    //   } else if (window.innerWidth < 768) {
-    //     setVisibleItems(menuItems.slice(0, 4)); // MD screen: Sirf 4 items dikhaye
-    //     setHiddenItems(menuItems.slice(4));
-    //   } else {
-    //     setVisibleItems(menuItems.slice(0, 7)); // Large screen: Pehle 7 items
-    //     setHiddenItems(menuItems.slice(7));
-    //   }
-    // };
+
     const updateMenu = () => {
       const containerWidth = document.getElementById("nav-container")?.offsetWidth || window.innerWidth; // Container width
       const itemWidth = 120; // Approx width of each menu item (adjust as needed)
@@ -54,12 +43,15 @@ export default function Navbar() {
       {/* Top Header */}
       <div className="max-w-6xl mx-auto flex flex-row md:flex-row items-center justify-between px-6 py-2 gap-4">
         {/* Logo and Location */}
-        <div className="flex items-center space-x-3">
-          <div className="bg-[var(--color-primary)] p-2 rounded-full">
-            <span className="text-lg font-bold">🛍️</span>
+        <Link href="/">
+          <div className="flex items-center space-x-3">
+            <div className="bg-[var(--color-primary)] p-2 rounded-full">
+              <span className="text-lg font-bold">🛍️</span>
+            </div>
+            <h1 className="text-xl font-bold">Rakesh Shop</h1>
           </div>
-          <h1 className="text-xl font-bold">Rakesh Shop</h1>
-        </div>
+        </Link>
+
         {/* Search Bar */}
         <div className="flex bg-[var(--color-primary)] items-center w-1/2 relative rounded-full px-3">
           <Search className=" text-white w-5 h-5 " />
