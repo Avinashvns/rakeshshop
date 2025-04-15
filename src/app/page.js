@@ -1,12 +1,10 @@
 
-import Footer from "@/components/footer";
 import HealthNutrition from "@/components/health";
-import Navbar from "@/components/navbar";
 
 export default function Home() {
   return (
     <>
-    
+
       <HealthNutrition />
 
 

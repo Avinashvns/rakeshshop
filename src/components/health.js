@@ -71,7 +71,7 @@ export default function HealthNutrition() {
         {/* Section Header */}
         <div className="flex justify-between items-center ms-10">
           <h2 className="text-xl font-bold">Health & Nutrition</h2>
-          <a href="#" className="text-sm text-blue-600 font-semibold">View All</a>
+          <Link href="#" className="text-sm text-blue-600 font-semibold">View All</Link>
         </div>
 
         {/* Product Scrollable Section */}
